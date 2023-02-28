@@ -343,3 +343,716 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 2.4ms | Allocations: 19266)
 
 
+Started GET "/users" for 127.0.0.1 at 2023-02-28 12:09:39 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 9.0ms | ActiveRecord: 3.2ms | Allocations: 38281)
+
+
+Started GET "/sales" for 127.0.0.1 at 2023-02-28 12:09:43 -0300
+Processing by SalesController#index as HTML
+  [1m[36mSale Load (0.3ms)[0m  [1m[34mSELECT "sales".* FROM "sales"[0m
+  ↳ app/controllers/sales_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 19.4ms | ActiveRecord: 2.0ms | Allocations: 19697)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-28 12:19:19 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user99hunters/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user99hunters/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 827)
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 6560)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-02-28 12:19:24 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 23.2ms | ActiveRecord: 2.9ms | Allocations: 19261)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-02-28 12:19:31 -0300
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 2.6ms | Allocations: 15851)
+
+
+Started GET "/sales" for 127.0.0.1 at 2023-02-28 12:19:35 -0300
+Processing by SalesController#index as HTML
+  [1m[36mSale Load (0.3ms)[0m  [1m[34mSELECT "sales".* FROM "sales"[0m
+  ↳ app/controllers/sales_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 10.2ms | ActiveRecord: 1.8ms | Allocations: 19337)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Celeste Miller MD"], ["quantity", 4], ["price_in_cents", 5112], ["created_at", "2023-02-28 16:20:43.706493"], ["updated_at", "2023-02-28 16:20:43.706493"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pattie Franecki"], ["quantity", 91], ["price_in_cents", 6576], ["created_at", "2023-02-28 16:20:43.710198"], ["updated_at", "2023-02-28 16:20:43.710198"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Manuel Hermiston"], ["quantity", 48], ["price_in_cents", 362], ["created_at", "2023-02-28 16:20:43.712884"], ["updated_at", "2023-02-28 16:20:43.712884"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gayla Huel DDS"], ["quantity", 7], ["price_in_cents", 1330], ["created_at", "2023-02-28 16:20:43.715477"], ["updated_at", "2023-02-28 16:20:43.715477"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Darwin Hilpert"], ["quantity", 95], ["price_in_cents", 3898], ["created_at", "2023-02-28 16:20:43.717944"], ["updated_at", "2023-02-28 16:20:43.717944"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Miss Humberto Gerlach"], ["quantity", 28], ["price_in_cents", 4092], ["created_at", "2023-02-28 16:20:43.720491"], ["updated_at", "2023-02-28 16:20:43.720491"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Delmar Gorczany"], ["quantity", 62], ["price_in_cents", 4807], ["created_at", "2023-02-28 16:20:43.723067"], ["updated_at", "2023-02-28 16:20:43.723067"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Astrid Cartwright"], ["quantity", 93], ["price_in_cents", 1819], ["created_at", "2023-02-28 16:20:43.725582"], ["updated_at", "2023-02-28 16:20:43.725582"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Prof. Sherika MacGyver"], ["quantity", 42], ["price_in_cents", 8017], ["created_at", "2023-02-28 16:20:43.728236"], ["updated_at", "2023-02-28 16:20:43.728236"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Richard Kohler"], ["quantity", 64], ["price_in_cents", 5048], ["created_at", "2023-02-28 16:20:43.730811"], ["updated_at", "2023-02-28 16:20:43.730811"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stephane Greenholt"], ["quantity", 72], ["price_in_cents", 5660], ["created_at", "2023-02-28 16:21:53.687736"], ["updated_at", "2023-02-28 16:21:53.687736"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Henrietta Kassulke"], ["quantity", 95], ["price_in_cents", 9785], ["created_at", "2023-02-28 16:21:53.694866"], ["updated_at", "2023-02-28 16:21:53.694866"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stanley Huels Jr."], ["quantity", 55], ["price_in_cents", 4642], ["created_at", "2023-02-28 16:21:53.697816"], ["updated_at", "2023-02-28 16:21:53.697816"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Idell Hackett III"], ["quantity", 72], ["price_in_cents", 9975], ["created_at", "2023-02-28 16:21:53.700838"], ["updated_at", "2023-02-28 16:21:53.700838"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ossie Conn"], ["quantity", 63], ["price_in_cents", 7741], ["created_at", "2023-02-28 16:21:53.703762"], ["updated_at", "2023-02-28 16:21:53.703762"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Msgr. Darren O'Kon"], ["quantity", 82], ["price_in_cents", 3511], ["created_at", "2023-02-28 16:21:53.706799"], ["updated_at", "2023-02-28 16:21:53.706799"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Denver Tromp"], ["quantity", 71], ["price_in_cents", 9425], ["created_at", "2023-02-28 16:21:53.709995"], ["updated_at", "2023-02-28 16:21:53.709995"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bobby Bechtelar"], ["quantity", 100], ["price_in_cents", 1127], ["created_at", "2023-02-28 16:21:53.713048"], ["updated_at", "2023-02-28 16:21:53.713048"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jocelyn Cronin LLD"], ["quantity", 72], ["price_in_cents", 3328], ["created_at", "2023-02-28 16:21:53.716201"], ["updated_at", "2023-02-28 16:21:53.716201"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Clifton Kerluke III"], ["quantity", 46], ["price_in_cents", 9092], ["created_at", "2023-02-28 16:21:53.719575"], ["updated_at", "2023-02-28 16:21:53.719575"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ms. Allen Crona"], ["quantity", 80], ["price_in_cents", 8944], ["created_at", "2023-02-28 16:23:28.213847"], ["updated_at", "2023-02-28 16:23:28.213847"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Anh Murray I"], ["quantity", 60], ["price_in_cents", 4122], ["created_at", "2023-02-28 16:23:28.220589"], ["updated_at", "2023-02-28 16:23:28.220589"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Carey Kunze"], ["quantity", 61], ["price_in_cents", 3519], ["created_at", "2023-02-28 16:23:28.223690"], ["updated_at", "2023-02-28 16:23:28.223690"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Regenia Jones"], ["quantity", 71], ["price_in_cents", 7298], ["created_at", "2023-02-28 16:23:28.226697"], ["updated_at", "2023-02-28 16:23:28.226697"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Genia Toy CPA"], ["quantity", 64], ["price_in_cents", 1773], ["created_at", "2023-02-28 16:23:28.229493"], ["updated_at", "2023-02-28 16:23:28.229493"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Eleanor Nitzsche"], ["quantity", 56], ["price_in_cents", 9413], ["created_at", "2023-02-28 16:23:28.232405"], ["updated_at", "2023-02-28 16:23:28.232405"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Junior Schulist DC"], ["quantity", 26], ["price_in_cents", 7524], ["created_at", "2023-02-28 16:23:28.235382"], ["updated_at", "2023-02-28 16:23:28.235382"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Randy Maggio"], ["quantity", 51], ["price_in_cents", 6861], ["created_at", "2023-02-28 16:23:28.238430"], ["updated_at", "2023-02-28 16:23:28.238430"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Cody Lindgren"], ["quantity", 9], ["price_in_cents", 3762], ["created_at", "2023-02-28 16:23:28.241772"], ["updated_at", "2023-02-28 16:23:28.241772"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ms. Jewel Lebsack"], ["quantity", 26], ["price_in_cents", 829], ["created_at", "2023-02-28 16:23:28.244899"], ["updated_at", "2023-02-28 16:23:28.244899"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Andy Heidenreich"], ["quantity", 27], ["price_in_cents", 2031], ["created_at", "2023-02-28 16:24:21.599663"], ["updated_at", "2023-02-28 16:24:21.599663"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Lean Predovic"], ["quantity", 84], ["price_in_cents", 6219], ["created_at", "2023-02-28 16:24:21.606135"], ["updated_at", "2023-02-28 16:24:21.606135"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Vince Corwin LLD"], ["quantity", 76], ["price_in_cents", 6075], ["created_at", "2023-02-28 16:24:21.609292"], ["updated_at", "2023-02-28 16:24:21.609292"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Keven Turner"], ["quantity", 64], ["price_in_cents", 7187], ["created_at", "2023-02-28 16:24:21.612317"], ["updated_at", "2023-02-28 16:24:21.612317"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Frederick Glover"], ["quantity", 97], ["price_in_cents", 5692], ["created_at", "2023-02-28 16:24:21.615160"], ["updated_at", "2023-02-28 16:24:21.615160"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Orpha Conroy CPA"], ["quantity", 7], ["price_in_cents", 3586], ["created_at", "2023-02-28 16:24:21.618216"], ["updated_at", "2023-02-28 16:24:21.618216"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dominique Cummings"], ["quantity", 66], ["price_in_cents", 1346], ["created_at", "2023-02-28 16:24:21.621391"], ["updated_at", "2023-02-28 16:24:21.621391"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sen. Audrie Stamm"], ["quantity", 88], ["price_in_cents", 8928], ["created_at", "2023-02-28 16:24:21.624725"], ["updated_at", "2023-02-28 16:24:21.624725"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mica Robel V"], ["quantity", 36], ["price_in_cents", 1370], ["created_at", "2023-02-28 16:24:21.627814"], ["updated_at", "2023-02-28 16:24:21.627814"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Willard Haag"], ["quantity", 64], ["price_in_cents", 9776], ["created_at", "2023-02-28 16:24:21.630832"], ["updated_at", "2023-02-28 16:24:21.630832"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pasquale Rippin LLD"], ["quantity", 97], ["price_in_cents", 8897], ["created_at", "2023-02-28 16:25:03.975662"], ["updated_at", "2023-02-28 16:25:03.975662"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Deandre Nolan III"], ["quantity", 38], ["price_in_cents", 3071], ["created_at", "2023-02-28 16:25:03.982159"], ["updated_at", "2023-02-28 16:25:03.982159"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ila Hane"], ["quantity", 94], ["price_in_cents", 3596], ["created_at", "2023-02-28 16:25:03.985094"], ["updated_at", "2023-02-28 16:25:03.985094"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sha Rogahn"], ["quantity", 28], ["price_in_cents", 2416], ["created_at", "2023-02-28 16:25:03.987996"], ["updated_at", "2023-02-28 16:25:03.987996"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lavone Simonis"], ["quantity", 6], ["price_in_cents", 9500], ["created_at", "2023-02-28 16:25:03.990835"], ["updated_at", "2023-02-28 16:25:03.990835"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Julietta Konopelski CPA"], ["quantity", 8], ["price_in_cents", 9276], ["created_at", "2023-02-28 16:25:03.993649"], ["updated_at", "2023-02-28 16:25:03.993649"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Demetrice Schneider"], ["quantity", 81], ["price_in_cents", 9334], ["created_at", "2023-02-28 16:25:03.996823"], ["updated_at", "2023-02-28 16:25:03.996823"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Genny Hettinger II"], ["quantity", 96], ["price_in_cents", 3118], ["created_at", "2023-02-28 16:25:04.000225"], ["updated_at", "2023-02-28 16:25:04.000225"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lorean Armstrong"], ["quantity", 50], ["price_in_cents", 8866], ["created_at", "2023-02-28 16:25:04.003783"], ["updated_at", "2023-02-28 16:25:04.003783"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Josh Goldner"], ["quantity", 15], ["price_in_cents", 7598], ["created_at", "2023-02-28 16:25:04.007011"], ["updated_at", "2023-02-28 16:25:04.007011"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Corina Weissnat VM"], ["quantity", 48], ["price_in_cents", 9843], ["created_at", "2023-02-28 16:25:24.950217"], ["updated_at", "2023-02-28 16:25:24.950217"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jacquelin Jerde"], ["quantity", 87], ["price_in_cents", 4943], ["created_at", "2023-02-28 16:25:24.956538"], ["updated_at", "2023-02-28 16:25:24.956538"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Yi Hodkiewicz"], ["quantity", 20], ["price_in_cents", 5765], ["created_at", "2023-02-28 16:25:24.959580"], ["updated_at", "2023-02-28 16:25:24.959580"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Prince Jacobs"], ["quantity", 63], ["price_in_cents", 924], ["created_at", "2023-02-28 16:25:24.962492"], ["updated_at", "2023-02-28 16:25:24.962492"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Nick Stokes"], ["quantity", 5], ["price_in_cents", 3996], ["created_at", "2023-02-28 16:25:24.965159"], ["updated_at", "2023-02-28 16:25:24.965159"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stevie Steuber"], ["quantity", 77], ["price_in_cents", 3164], ["created_at", "2023-02-28 16:25:24.968429"], ["updated_at", "2023-02-28 16:25:24.968429"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Giovanni DuBuque"], ["quantity", 94], ["price_in_cents", 2988], ["created_at", "2023-02-28 16:25:24.971640"], ["updated_at", "2023-02-28 16:25:24.971640"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Tory Dooley MD"], ["quantity", 13], ["price_in_cents", 2541], ["created_at", "2023-02-28 16:25:24.974922"], ["updated_at", "2023-02-28 16:25:24.974922"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Merry Nader JD"], ["quantity", 14], ["price_in_cents", 7225], ["created_at", "2023-02-28 16:25:24.978142"], ["updated_at", "2023-02-28 16:25:24.978142"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Victorina Casper"], ["quantity", 18], ["price_in_cents", 9263], ["created_at", "2023-02-28 16:25:24.981518"], ["updated_at", "2023-02-28 16:25:24.981518"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Corey Cremin"], ["quantity", 19], ["price_in_cents", 149], ["created_at", "2023-02-28 16:25:40.823571"], ["updated_at", "2023-02-28 16:25:40.823571"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Otis Erdman"], ["quantity", 79], ["price_in_cents", 2680], ["created_at", "2023-02-28 16:25:40.830083"], ["updated_at", "2023-02-28 16:25:40.830083"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Donnell Hermann"], ["quantity", 88], ["price_in_cents", 3307], ["created_at", "2023-02-28 16:25:40.832970"], ["updated_at", "2023-02-28 16:25:40.832970"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Shakia Dietrich"], ["quantity", 56], ["price_in_cents", 575], ["created_at", "2023-02-28 16:25:40.836021"], ["updated_at", "2023-02-28 16:25:40.836021"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Don Hettinger"], ["quantity", 56], ["price_in_cents", 3828], ["created_at", "2023-02-28 16:25:40.838924"], ["updated_at", "2023-02-28 16:25:40.838924"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dong Johns"], ["quantity", 48], ["price_in_cents", 1636], ["created_at", "2023-02-28 16:25:40.841936"], ["updated_at", "2023-02-28 16:25:40.841936"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gov. Louie Wintheiser"], ["quantity", 55], ["price_in_cents", 2429], ["created_at", "2023-02-28 16:25:40.844934"], ["updated_at", "2023-02-28 16:25:40.844934"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lavon Jast"], ["quantity", 23], ["price_in_cents", 4499], ["created_at", "2023-02-28 16:25:40.848159"], ["updated_at", "2023-02-28 16:25:40.848159"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Josefina Yundt"], ["quantity", 17], ["price_in_cents", 9026], ["created_at", "2023-02-28 16:25:40.851390"], ["updated_at", "2023-02-28 16:25:40.851390"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Alonzo Hamill Sr."], ["quantity", 68], ["price_in_cents", 354], ["created_at", "2023-02-28 16:25:40.856340"], ["updated_at", "2023-02-28 16:25:40.856340"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started GET "/products" for 127.0.0.1 at 2023-02-28 13:29:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 14.4ms | ActiveRecord: 2.5ms | Allocations: 43721)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-28 16:10:28 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user99hunters/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user99hunters/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 827)
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 6560)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-02-28 16:10:32 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 9.9ms | ActiveRecord: 3.3ms | Allocations: 19260)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-02-28 16:10:37 -0300
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 1.8ms | Allocations: 21992)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Msgr. Sammy Bahringer"], ["email", "dalton@fay.co"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:17:01.654490"], ["updated_at", "2023-02-28 19:17:01.654490"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Fannie Flatley"], ["email", "lynn@jaskolski-corwin.net"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:17:01.902071"], ["updated_at", "2023-02-28 19:17:01.902071"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Pearlene Donnelly"], ["email", "joe@hamill.com"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:17:02.148934"], ["updated_at", "2023-02-28 19:17:02.148934"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Derick Hickle"], ["email", "nereida@schmitt-goyette.info"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:17:02.395121"], ["updated_at", "2023-02-28 19:17:02.395121"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Willard White"], ["email", "jefferey@hoeger-morissette.net"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:17:02.642477"], ["updated_at", "2023-02-28 19:17:02.642477"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Amado Purdy"], ["quantity", 67], ["price_in_cents", 5015], ["created_at", "2023-02-28 19:17:02.657673"], ["updated_at", "2023-02-28 19:17:02.657673"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mickey Kulas"], ["quantity", 54], ["price_in_cents", 3605], ["created_at", "2023-02-28 19:17:02.661077"], ["updated_at", "2023-02-28 19:17:02.661077"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Demetrius Murphy"], ["quantity", 78], ["price_in_cents", 1669], ["created_at", "2023-02-28 19:17:02.663932"], ["updated_at", "2023-02-28 19:17:02.663932"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Rev. Kristofer Collier"], ["quantity", 41], ["price_in_cents", 6176], ["created_at", "2023-02-28 19:17:02.666998"], ["updated_at", "2023-02-28 19:17:02.666998"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Malia Pagac"], ["quantity", 64], ["price_in_cents", 1715], ["created_at", "2023-02-28 19:17:02.669841"], ["updated_at", "2023-02-28 19:17:02.669841"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ruben Zieme"], ["quantity", 90], ["price_in_cents", 7193], ["created_at", "2023-02-28 19:17:02.672783"], ["updated_at", "2023-02-28 19:17:02.672783"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Greg Lesch"], ["quantity", 54], ["price_in_cents", 2629], ["created_at", "2023-02-28 19:17:02.675975"], ["updated_at", "2023-02-28 19:17:02.675975"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Merle Block"], ["quantity", 91], ["price_in_cents", 5917], ["created_at", "2023-02-28 19:17:02.679649"], ["updated_at", "2023-02-28 19:17:02.679649"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Hiram Grady"], ["quantity", 64], ["price_in_cents", 7349], ["created_at", "2023-02-28 19:17:02.682986"], ["updated_at", "2023-02-28 19:17:02.682986"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Rep. Wallace Bechtelar"], ["quantity", 87], ["price_in_cents", 4358], ["created_at", "2023-02-28 19:17:02.686068"], ["updated_at", "2023-02-28 19:17:02.686068"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Wyatt Rohan"], ["email", "jeanelle@hickle-jakubowski.net"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:18:02.375454"], ["updated_at", "2023-02-28 19:18:02.375454"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Geralyn Smith Sr."], ["email", "reta@gutkowski.biz"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:18:02.623034"], ["updated_at", "2023-02-28 19:18:02.623034"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Curtis Predovic"], ["email", "bud@kulas-streich.co"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:18:02.870340"], ["updated_at", "2023-02-28 19:18:02.870340"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Elbert Jaskolski"], ["email", "valentine.yundt@rohan.com"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:18:03.116093"], ["updated_at", "2023-02-28 19:18:03.116093"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Enid Keebler"], ["email", "zachary_hammes@kozey.org"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:18:03.365885"], ["updated_at", "2023-02-28 19:18:03.365885"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Amb. Regine O'Connell"], ["quantity", 69], ["price_in_cents", 3364], ["created_at", "2023-02-28 19:18:03.379514"], ["updated_at", "2023-02-28 19:18:03.379514"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ms. Jillian Jacobi"], ["quantity", 23], ["price_in_cents", 3244], ["created_at", "2023-02-28 19:18:03.382929"], ["updated_at", "2023-02-28 19:18:03.382929"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sang Ondricka"], ["quantity", 26], ["price_in_cents", 1130], ["created_at", "2023-02-28 19:18:03.385826"], ["updated_at", "2023-02-28 19:18:03.385826"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Russell Ryan I"], ["quantity", 39], ["price_in_cents", 8481], ["created_at", "2023-02-28 19:18:03.388712"], ["updated_at", "2023-02-28 19:18:03.388712"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Msgr. Hermine Stamm"], ["quantity", 46], ["price_in_cents", 4272], ["created_at", "2023-02-28 19:18:03.391560"], ["updated_at", "2023-02-28 19:18:03.391560"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Rev. Dominick Schultz"], ["quantity", 79], ["price_in_cents", 2948], ["created_at", "2023-02-28 19:18:03.394710"], ["updated_at", "2023-02-28 19:18:03.394710"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Adan Hilpert"], ["quantity", 63], ["price_in_cents", 2281], ["created_at", "2023-02-28 19:18:03.397442"], ["updated_at", "2023-02-28 19:18:03.397442"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Israel Kling"], ["quantity", 51], ["price_in_cents", 1344], ["created_at", "2023-02-28 19:18:03.400590"], ["updated_at", "2023-02-28 19:18:03.400590"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mary Becker VM"], ["quantity", 95], ["price_in_cents", 9519], ["created_at", "2023-02-28 19:18:03.403958"], ["updated_at", "2023-02-28 19:18:03.403958"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pres. Jed Buckridge"], ["quantity", 39], ["price_in_cents", 5108], ["created_at", "2023-02-28 19:18:03.407020"], ["updated_at", "2023-02-28 19:18:03.407020"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Antonio Ankunding"], ["email", "dwain@dach.info"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:19:03.993611"], ["updated_at", "2023-02-28 19:19:03.993611"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Glenn Graham"], ["email", "javier.runte@walsh.net"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:19:04.241533"], ["updated_at", "2023-02-28 19:19:04.241533"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tony Konopelski"], ["email", "courtney@graham-mann.net"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:19:04.490731"], ["updated_at", "2023-02-28 19:19:04.490731"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mel Johnston"], ["email", "gregg@bauch-aufderhar.name"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:19:04.735609"], ["updated_at", "2023-02-28 19:19:04.735609"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Coreen Veum CPA"], ["email", "ike@mante.org"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:19:04.980171"], ["updated_at", "2023-02-28 19:19:04.980171"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Andre Reilly"], ["quantity", 39], ["price_in_cents", 6328], ["created_at", "2023-02-28 19:19:04.994726"], ["updated_at", "2023-02-28 19:19:04.994726"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jessie Haag"], ["quantity", 77], ["price_in_cents", 4289], ["created_at", "2023-02-28 19:19:04.997956"], ["updated_at", "2023-02-28 19:19:04.997956"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hon. Sharleen O'Kon"], ["quantity", 26], ["price_in_cents", 1040], ["created_at", "2023-02-28 19:19:05.001040"], ["updated_at", "2023-02-28 19:19:05.001040"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Filomena Zboncak III"], ["quantity", 34], ["price_in_cents", 2152], ["created_at", "2023-02-28 19:19:05.004345"], ["updated_at", "2023-02-28 19:19:05.004345"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lavelle Spinka"], ["quantity", 33], ["price_in_cents", 179], ["created_at", "2023-02-28 19:19:05.007113"], ["updated_at", "2023-02-28 19:19:05.007113"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Miss Arvilla Gorczany"], ["quantity", 100], ["price_in_cents", 9951], ["created_at", "2023-02-28 19:19:05.009768"], ["updated_at", "2023-02-28 19:19:05.009768"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Antoine Bartoletti"], ["quantity", 64], ["price_in_cents", 2144], ["created_at", "2023-02-28 19:19:05.012881"], ["updated_at", "2023-02-28 19:19:05.012881"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dr. Darwin Kunde"], ["quantity", 12], ["price_in_cents", 3542], ["created_at", "2023-02-28 19:19:05.016196"], ["updated_at", "2023-02-28 19:19:05.016196"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Curtis Gorczany"], ["quantity", 54], ["price_in_cents", 1028], ["created_at", "2023-02-28 19:19:05.019157"], ["updated_at", "2023-02-28 19:19:05.019157"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Adelia VonRueden"], ["quantity", 95], ["price_in_cents", 8104], ["created_at", "2023-02-28 19:19:05.022561"], ["updated_at", "2023-02-28 19:19:05.022561"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Roni Crona"], ["email", "sherika.lueilwitz@doyle.co"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:19:19.884674"], ["updated_at", "2023-02-28 19:19:19.884674"]]
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Lyndsay Waters"], ["email", "violette_west@cartwright-schumm.org"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:19:20.143872"], ["updated_at", "2023-02-28 19:19:20.143872"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Terence D'Amore"], ["email", "derick.macejkovic@abernathy.io"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:19:20.392642"], ["updated_at", "2023-02-28 19:19:20.392642"]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Quintin Douglas"], ["email", "lean_hilll@collins.info"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:19:20.640437"], ["updated_at", "2023-02-28 19:19:20.640437"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Roxie Waelchi MD"], ["email", "dean@batz.com"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:19:20.888803"], ["updated_at", "2023-02-28 19:19:20.888803"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.8ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Marcia Feest DVM"], ["quantity", 14], ["price_in_cents", 8589], ["created_at", "2023-02-28 19:19:20.899733"], ["updated_at", "2023-02-28 19:19:20.899733"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lean Gerhold"], ["quantity", 92], ["price_in_cents", 2264], ["created_at", "2023-02-28 19:19:20.905816"], ["updated_at", "2023-02-28 19:19:20.905816"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jamel Crona"], ["quantity", 43], ["price_in_cents", 2993], ["created_at", "2023-02-28 19:19:20.910555"], ["updated_at", "2023-02-28 19:19:20.910555"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dr. Hellen Krajcik"], ["quantity", 46], ["price_in_cents", 7759], ["created_at", "2023-02-28 19:19:20.913815"], ["updated_at", "2023-02-28 19:19:20.913815"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dorine Mills"], ["quantity", 20], ["price_in_cents", 5963], ["created_at", "2023-02-28 19:19:20.916832"], ["updated_at", "2023-02-28 19:19:20.916832"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Blaine Bernier"], ["quantity", 77], ["price_in_cents", 9227], ["created_at", "2023-02-28 19:19:20.920572"], ["updated_at", "2023-02-28 19:19:20.920572"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Elida Flatley"], ["quantity", 83], ["price_in_cents", 3883], ["created_at", "2023-02-28 19:19:20.924652"], ["updated_at", "2023-02-28 19:19:20.924652"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stefan Ryan VM"], ["quantity", 92], ["price_in_cents", 7153], ["created_at", "2023-02-28 19:19:20.928129"], ["updated_at", "2023-02-28 19:19:20.928129"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jerrica Windler Sr."], ["quantity", 100], ["price_in_cents", 3762], ["created_at", "2023-02-28 19:19:20.931146"], ["updated_at", "2023-02-28 19:19:20.931146"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Toby Bailey"], ["quantity", 97], ["price_in_cents", 7357], ["created_at", "2023-02-28 19:19:20.933954"], ["updated_at", "2023-02-28 19:19:20.933954"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSale Create (0.5ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 4], ["total_in_cents", 8119], ["product_id", 1], ["user_id", 1], ["created_at", "2023-02-28 19:19:20.962845"], ["updated_at", "2023-02-28 19:19:20.962845"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSale Create (0.3ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 2], ["total_in_cents", 1409], ["product_id", 2], ["user_id", 2], ["created_at", "2023-02-28 19:19:20.969426"], ["updated_at", "2023-02-28 19:19:20.969426"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSale Create (0.3ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 5], ["total_in_cents", 8798], ["product_id", 3], ["user_id", 3], ["created_at", "2023-02-28 19:19:20.975453"], ["updated_at", "2023-02-28 19:19:20.975453"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSale Create (0.3ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 2], ["total_in_cents", 9010], ["product_id", 4], ["user_id", 4], ["created_at", "2023-02-28 19:19:20.981610"], ["updated_at", "2023-02-28 19:19:20.981610"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSale Create (0.4ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 2], ["total_in_cents", 6464], ["product_id", 5], ["user_id", 5], ["created_at", "2023-02-28 19:19:20.987977"], ["updated_at", "2023-02-28 19:19:20.987977"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Darci Morar"], ["email", "maryjo@langworth.com"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:25:42.718768"], ["updated_at", "2023-02-28 19:25:42.718768"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Andrea Stroman"], ["email", "kyle@cremin.biz"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:26:00.292276"], ["updated_at", "2023-02-28 19:26:00.292276"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Selina Emmerich"], ["email", "jodee.skiles@blanda.net"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:26:17.132494"], ["updated_at", "2023-02-28 19:26:17.132494"]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Arlyne Friesen"], ["email", "damon.mclaughlin@dare-kuhn.io"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:26:17.387419"], ["updated_at", "2023-02-28 19:26:17.387419"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Noreen Labadie"], ["email", "germaine_adams@oreilly-vonrueden.io"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:26:17.640528"], ["updated_at", "2023-02-28 19:26:17.640528"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Douglass MacGyver"], ["email", "alfred.stoltenberg@ledner-windler.info"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:26:17.892072"], ["updated_at", "2023-02-28 19:26:17.892072"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Elicia Denesik"], ["email", "jefferson.lindgren@schimmel.co"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:26:18.143067"], ["updated_at", "2023-02-28 19:26:18.143067"]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Heriberto Wilderman"], ["quantity", 29], ["price_in_cents", 8927], ["created_at", "2023-02-28 19:26:18.159755"], ["updated_at", "2023-02-28 19:26:18.159755"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Adolfo Schowalter LLD"], ["quantity", 60], ["price_in_cents", 3410], ["created_at", "2023-02-28 19:26:18.163315"], ["updated_at", "2023-02-28 19:26:18.163315"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Priscila Wilderman"], ["quantity", 47], ["price_in_cents", 8786], ["created_at", "2023-02-28 19:26:18.166319"], ["updated_at", "2023-02-28 19:26:18.166319"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Emmanuel Spinka CPA"], ["quantity", 78], ["price_in_cents", 2037], ["created_at", "2023-02-28 19:26:18.169346"], ["updated_at", "2023-02-28 19:26:18.169346"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hon. Vicky Jerde"], ["quantity", 31], ["price_in_cents", 5105], ["created_at", "2023-02-28 19:26:18.172753"], ["updated_at", "2023-02-28 19:26:18.172753"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Londa Wuckert Sr."], ["quantity", 31], ["price_in_cents", 3915], ["created_at", "2023-02-28 19:26:18.175709"], ["updated_at", "2023-02-28 19:26:18.175709"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bradly Shields"], ["quantity", 61], ["price_in_cents", 7356], ["created_at", "2023-02-28 19:26:18.180160"], ["updated_at", "2023-02-28 19:26:18.180160"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Marquetta Hansen"], ["quantity", 16], ["price_in_cents", 6704], ["created_at", "2023-02-28 19:26:18.183657"], ["updated_at", "2023-02-28 19:26:18.183657"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Amb. Gerald Kuphal"], ["quantity", 12], ["price_in_cents", 6522], ["created_at", "2023-02-28 19:26:18.186871"], ["updated_at", "2023-02-28 19:26:18.186871"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lanell Reinger"], ["quantity", 74], ["price_in_cents", 2779], ["created_at", "2023-02-28 19:26:18.190265"], ["updated_at", "2023-02-28 19:26:18.190265"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSale Create (0.5ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 2], ["total_in_cents", 4396], ["product_id", 1], ["user_id", 1], ["created_at", "2023-02-28 19:26:18.221310"], ["updated_at", "2023-02-28 19:26:18.221310"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSale Create (0.3ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 5], ["total_in_cents", 9689], ["product_id", 2], ["user_id", 2], ["created_at", "2023-02-28 19:26:18.227829"], ["updated_at", "2023-02-28 19:26:18.227829"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSale Create (0.3ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 2], ["total_in_cents", 6490], ["product_id", 3], ["user_id", 3], ["created_at", "2023-02-28 19:26:18.233867"], ["updated_at", "2023-02-28 19:26:18.233867"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSale Create (0.3ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 3], ["total_in_cents", 5814], ["product_id", 4], ["user_id", 4], ["created_at", "2023-02-28 19:26:18.240080"], ["updated_at", "2023-02-28 19:26:18.240080"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSale Create (0.4ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 4], ["total_in_cents", 2736], ["product_id", 5], ["user_id", 5], ["created_at", "2023-02-28 19:26:18.246803"], ["updated_at", "2023-02-28 19:26:18.246803"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mikki Rice Jr."], ["email", "jose.koepp@sipes.name"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:26:29.993985"], ["updated_at", "2023-02-28 19:26:29.993985"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Pasquale Ritchie Sr."], ["email", "madonna@hahn.net"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:26:30.240189"], ["updated_at", "2023-02-28 19:26:30.240189"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Dollie Cartwright"], ["email", "maxine_predovic@macejkovic-brekke.org"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:26:30.486918"], ["updated_at", "2023-02-28 19:26:30.486918"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ahmed VonRueden"], ["email", "lamont_herzog@johns.biz"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:26:30.734676"], ["updated_at", "2023-02-28 19:26:30.734676"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "The Hon. Wilburn Hamill"], ["email", "tasia@aufderhar.name"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 19:26:30.983052"], ["updated_at", "2023-02-28 19:26:30.983052"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lina Toy III"], ["quantity", 47], ["price_in_cents", 9641], ["created_at", "2023-02-28 19:26:30.996238"], ["updated_at", "2023-02-28 19:26:30.996238"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Wilfredo Stiedemann"], ["quantity", 28], ["price_in_cents", 8895], ["created_at", "2023-02-28 19:26:30.999841"], ["updated_at", "2023-02-28 19:26:30.999841"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dannie Runolfsson"], ["quantity", 40], ["price_in_cents", 9435], ["created_at", "2023-02-28 19:26:31.003012"], ["updated_at", "2023-02-28 19:26:31.003012"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jamison Rippin"], ["quantity", 14], ["price_in_cents", 524], ["created_at", "2023-02-28 19:26:31.006044"], ["updated_at", "2023-02-28 19:26:31.006044"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Miss Collen Langosh"], ["quantity", 66], ["price_in_cents", 7055], ["created_at", "2023-02-28 19:26:31.008854"], ["updated_at", "2023-02-28 19:26:31.008854"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mrs. Royal Herman"], ["quantity", 47], ["price_in_cents", 3570], ["created_at", "2023-02-28 19:26:31.011929"], ["updated_at", "2023-02-28 19:26:31.011929"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Aurelio Sipes"], ["quantity", 95], ["price_in_cents", 8180], ["created_at", "2023-02-28 19:26:31.014777"], ["updated_at", "2023-02-28 19:26:31.014777"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bong Zulauf"], ["quantity", 73], ["price_in_cents", 4262], ["created_at", "2023-02-28 19:26:31.018990"], ["updated_at", "2023-02-28 19:26:31.018990"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jann Von"], ["quantity", 92], ["price_in_cents", 5043], ["created_at", "2023-02-28 19:26:31.022419"], ["updated_at", "2023-02-28 19:26:31.022419"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Harmony Fay"], ["quantity", 66], ["price_in_cents", 781], ["created_at", "2023-02-28 19:26:31.026801"], ["updated_at", "2023-02-28 19:26:31.026801"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSale Create (0.5ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 2], ["total_in_cents", 2082], ["product_id", 1], ["user_id", 1], ["created_at", "2023-02-28 19:26:31.061437"], ["updated_at", "2023-02-28 19:26:31.061437"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSale Create (0.3ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 2], ["total_in_cents", 2565], ["product_id", 2], ["user_id", 2], ["created_at", "2023-02-28 19:26:31.068312"], ["updated_at", "2023-02-28 19:26:31.068312"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSale Create (0.3ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 2], ["total_in_cents", 3216], ["product_id", 3], ["user_id", 3], ["created_at", "2023-02-28 19:26:31.074250"], ["updated_at", "2023-02-28 19:26:31.074250"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSale Create (0.4ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 1], ["total_in_cents", 7198], ["product_id", 4], ["user_id", 4], ["created_at", "2023-02-28 19:26:31.081465"], ["updated_at", "2023-02-28 19:26:31.081465"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSale Create (0.3ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 3], ["total_in_cents", 1037], ["product_id", 5], ["user_id", 5], ["created_at", "2023-02-28 19:26:31.090208"], ["updated_at", "2023-02-28 19:26:31.090208"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/login" for 127.0.0.1 at 2023-02-28 16:45:01 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as HTML
+  Parameters: {"email"=>"jose.koepp@sipes.name", "password"=>"[FILTERED]", "user"=>{"email"=>"jose.koepp@sipes.name", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jose.koepp@sipes.name"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `login'
+Completed 200 OK in 258ms (Views: 0.2ms | ActiveRecord: 2.7ms | Allocations: 38997)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-02-28 16:57:34 -0300
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 646)
+
+
+  
+NoMethodError (undefined method `include?' for nil:NilClass):
+  
+app/controllers/application_controller.rb:4:in `authenticate_user!'
+Started GET "/products" for 127.0.0.1 at 2023-02-28 16:58:16 -0300
+Processing by ProductsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | Allocations: 239)
+
+

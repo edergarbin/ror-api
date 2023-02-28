@@ -1,19 +1,17 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show update destroy ]
+  before_action :authenticate_user!
 
-  # GET /products
   def index
     @products = Product.all
 
     render json: @products
   end
 
-  # GET /products/1
   def show
     render json: @product
   end
 
-  # POST /products
   def create
     @product = Product.new(product_params)
 
@@ -24,7 +22,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /products/1
   def update
     if @product.update(product_params)
       render json: @product
