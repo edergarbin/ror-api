@@ -70,3 +70,261 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 8ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 6973)
 
 
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "ror_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE "ror_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2637597902571241365)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20230228133938)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "quantity" integer, "price_in_cents" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230228133938"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20230228134140)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "password" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230228134140"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSales (20230228134514)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "sales" ("id" bigserial primary key, "quantity" integer, "total_in_cents" integer, "product_id" bigint NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_afd82832c8"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+, CONSTRAINT "fk_rails_8e94f16ccc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_sales_on_product_id" ON "sales" ("product_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_sales_on_user_id" ON "sales" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230228134514"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-28 13:47:29.924037"], ["updated_at", "2023-02-28 13:47:29.924037"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2637597902571241365)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-02-28 10:47:41 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user99hunters/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user99hunters/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 827)
+Completed 200 OK in 10ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 6558)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-02-28 10:48:03 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1966)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-02-28 10:48:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+Started GET "/products" for 127.0.0.1 at 2023-02-28 10:49:21 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant ProductsController
+Did you mean?  ProdutosController):
+  
+Started GET "/products" for 127.0.0.1 at 2023-02-28 10:49:47 -0300
+  
+ActionController::RoutingError (uninitialized constant ProductsController
+Did you mean?  ProdutosController):
+  
+Started GET "/products" for 127.0.0.1 at 2023-02-28 10:49:50 -0300
+  
+ActionController::RoutingError (uninitialized constant ProductsController
+Did you mean?  ProdutosController):
+  
+Started GET "/products" for 127.0.0.1 at 2023-02-28 10:49:58 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+Zeitwerk::NameError (expected file /home/user99hunters/Development/seedz/ror-api/app/controllers/products_controller.rb to define constant ProductsController, but didn't):
+  
+zeitwerk (2.6.7) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.6.7) lib/zeitwerk/kernel.rb:31:in `require'
+activesupport (7.0.4.2) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.4.2) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.4.2) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.4.2) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.4.2) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.4.2) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.4.2) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.4.2) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/products" for 127.0.0.1 at 2023-02-28 10:52:57 -0300
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 2000)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-02-28 10:53:12 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1459)
+
+
+Started GET "/sales" for 127.0.0.1 at 2023-02-28 10:53:18 -0300
+Processing by SalesController#index as HTML
+  [1m[36mSale Load (0.4ms)[0m  [1m[34mSELECT "sales".* FROM "sales"[0m
+  ↳ app/controllers/sales_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 5270)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-28 10:55:08 -0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/user99hunters/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user99hunters/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 497)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 4148)
+
+
+Started GET "/Users" for 127.0.0.1 at 2023-02-28 10:55:13 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/Users"):
+  
+Started GET "/users" for 127.0.0.1 at 2023-02-28 10:55:22 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 779)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-02-28 10:57:34 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 676)
+
+
+Started POST "/products" for 127.0.0.1 at 2023-02-28 11:05:27 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"name"=>"Produto teste", "quantity"=>123, "price_in_cents"=>10000}}
+Completed 500 Internal Server Error in 3ms (Allocations: 2197)
+
+
+  
+NameError (undefined local variable or method `product' for #<ProductsController:0x0000000000dc78>
+Did you mean?  product_url):
+  
+app/controllers/products_controller.rb:18:in `create'
+Started POST "/products" for 127.0.0.1 at 2023-02-28 11:06:17 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"name"=>"Produto teste", "quantity"=>123, "price_in_cents"=>10000}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "quantity", "price_in_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Produto teste"], ["quantity", 123], ["price_in_cents", 10000], ["created_at", "2023-02-28 14:06:17.452104"], ["updated_at", "2023-02-28 14:06:17.452104"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+Completed 201 Created in 25ms (Views: 0.5ms | ActiveRecord: 6.7ms | Allocations: 22240)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-02-28 11:10:41 -0300
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+Started POST "/users" for 127.0.0.1 at 2023-02-28 11:11:15 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Eder", "email"=>"eder@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Eder"], ["email", "eder@gmail.com"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2023-02-28 14:11:16.359681"], ["updated_at", "2023-02-28 14:11:16.359681"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 302ms (Views: 0.5ms | ActiveRecord: 8.6ms | Allocations: 40975)
+
+
+Started POST "/sales" for 127.0.0.1 at 2023-02-28 11:28:33 -0300
+Processing by SalesController#create as HTML
+  Parameters: {"sale"=>{"quantity"=>3, "product_id"=>1, "user_id"=>1}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sales_controller.rb:19:in `create'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sales_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sales_controller.rb:26:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sales_controller.rb:26:in `create'
+  [1m[36mSale Create (3.0ms)[0m  [1m[32mINSERT INTO "sales" ("quantity", "total_in_cents", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quantity", 3], ["total_in_cents", 30000], ["product_id", 1], ["user_id", 1], ["created_at", "2023-02-28 14:28:33.292860"], ["updated_at", "2023-02-28 14:28:33.292860"]]
+  ↳ app/controllers/sales_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sales_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sales_controller.rb:28:in `create'
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "quantity" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["quantity", 120], ["updated_at", "2023-02-28 14:28:33.300021"], ["id", 1]]
+  ↳ app/controllers/sales_controller.rb:28:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sales_controller.rb:28:in `create'
+Completed 201 Created in 63ms (Views: 0.4ms | ActiveRecord: 14.5ms | Allocations: 47816)
+
+
+Started GET "/sales" for 127.0.0.1 at 2023-02-28 11:29:33 -0300
+Processing by SalesController#index as HTML
+  [1m[36mSale Load (0.2ms)[0m  [1m[34mSELECT "sales".* FROM "sales"[0m
+  ↳ app/controllers/sales_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1076)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-02-28 11:29:40 -0300
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started POST "/sales" for 127.0.0.1 at 2023-02-28 11:30:33 -0300
+Processing by SalesController#create as HTML
+  Parameters: {"sale"=>{"quantity"=>200, "product_id"=>1, "user_id"=>1}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sales_controller.rb:19:in `create'
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 759)
+
+

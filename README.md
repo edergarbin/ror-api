@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Projeto API REST em Rails
+Este projeto tem como objetivo desenvolver uma API REST com as funcionalidades de CRUD para usuário, produto e venda, além de permitir a realização de vendas, autenticação de usuários e testes.
 
-Things you may want to cover:
+##Requisitos
+Para executar este projeto é necessário ter instalado em seu computador:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ruby 2.7 ou superior <br />
+Rails 6.0 ou superior <br />
+Banco de dados PostgreSQL <br />
